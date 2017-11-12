@@ -1,7 +1,6 @@
 # rpc-test
 
 ##Requirements:
-- PHP 7.1 newer with mbscript extension
 - Docker
 - Composer
 
@@ -11,7 +10,6 @@
 ```
 git clone https://github.com/pukkancs/rpc-test.git rpc-test
 cd rpc-test
-composer install -d code
 ```
 
 - Add to hosts file:
@@ -23,6 +21,13 @@ composer install -d code
 ```
 docker-compose up
 ```
+
+- Install project dependencies
+
+```
+docker exec rpctest_php_1 bash -c 'composer install -d /code'
+```
+
 ##Usage:
 
 - Import RPC-Test.postman_collection.json into PostMan 
@@ -30,5 +35,5 @@ docker-compose up
 
 ##Unit and integration tests:
 ```
-./code/vendor/bin/phpunit ./code/tests/
+docker exec rpctest_php_1 bash -c '/code/vendor/bin/phpunit /code/tests'
 ```
