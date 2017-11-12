@@ -39,6 +39,29 @@ class Math
         return true;
     }
 
+    public function getAbsMin(CollectionInterface $subject, $excludeZeroItems = false): ?int
+    {
+        $absMin = null;
+
+        foreach ($subject->getValues() as $key => $item) {
+            if (!is_numeric($item)) {
+                continue;
+            }
+
+            if ($excludeZeroItems && $item === 0) {
+                continue;
+            }
+
+            if (!is_null($absMin) && abs($item) > $absMin) {
+                continue;
+            }
+
+            $absMin = abs($item);
+        }
+
+        return $absMin;
+    }
+
     private function calculateGreatestCommonDivider(CollectionInterface $subject): int
     {
         $gcd = 1;
@@ -65,25 +88,6 @@ class Math
         }
 
         return $gcd;
-    }
-
-    public function getAbsMin(CollectionInterface $subject, $excludeZeroItems = false): ?int
-    {
-        $absMin = null;
-
-        foreach ($subject->getValues() as $key => $item) {
-            if ($excludeZeroItems && $item === 0) {
-                continue;
-            }
-
-            if (!is_null($absMin) && abs($item) > $absMin) {
-                continue;
-            }
-
-            $absMin = abs($item);
-        }
-
-        return $absMin;
     }
 
 }
