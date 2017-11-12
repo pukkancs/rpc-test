@@ -1,10 +1,10 @@
 # rpc-test
 
-##Requirements:
+## Requirements:
 - Docker
 - Composer
 
-##Setup:
+## Setup:
 
 - Run the following commands
 ```
@@ -14,7 +14,7 @@ cd rpc-test
 
 - Add to hosts file:
 ```
-127.0.0.1       rpc-test.dev
+sudo -- sh -c "echo 127.0.0.1       rpc-test.dev >> /etc/hosts"
 ```
 
 - Fire up docker
@@ -28,12 +28,12 @@ docker-compose up
 docker exec rpctest_php_1 bash -c 'composer install -d /code'
 ```
 
-##Usage:
+## Usage:
 
 - Import RPC-Test.postman_collection.json into PostMan 
-- Fire the requests. (you can modify or add your own aswell)
+- Fire the requests. (you can modify or add your own as well)
 
-##Unit and integration tests:
+## Unit tests:
 ```
 docker exec rpctest_php_1 bash -c '/code/vendor/bin/phpunit /code/tests'
 ```
