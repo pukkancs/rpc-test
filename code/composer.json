@@ -1,0 +1,33 @@
+{
+    "name": "pukkancs/rpc-test",
+    "description": "",
+    "keywords": [
+        "rpc-test"
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/pukkancs/rpc.git"
+        }
+    ],
+    "homepage": "https://github.com/pukkancs/rpc-test",
+    "license": "MIT",
+    "require": {
+        "php" : ">=7.1.0",
+        "paybreak/rpc": "^0.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "6.*",
+        "mockery/mockery": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pukkancs\\Rpc\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pukkancs\\Rpc\\Test\\": "tests"
+        }
+    }
+}

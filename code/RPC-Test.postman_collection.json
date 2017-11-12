@@ -1,0 +1,122 @@
+{
+	"variables": [],
+	"info": {
+		"name": "RPC-Test",
+		"_postman_id": "d91af336-0161-01e8-e9d9-0cfb803ad489",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://rpc-test.dev:8080/?action=date",
+			"request": {
+				"url": {
+					"raw": "http://rpc-test.dev:8080/?action=date",
+					"protocol": "http",
+					"host": [
+						"rpc-test",
+						"dev"
+					],
+					"port": "8080",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "date",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://rpc-test.dev:8080/?action=gcd&params[a]=60&params[b]=120",
+			"request": {
+				"url": {
+					"raw": "http://rpc-test.dev:8080/?action=gcd&params[a]=60&params[b]=120",
+					"protocol": "http",
+					"host": [
+						"rpc-test",
+						"dev"
+					],
+					"port": "8080",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "gcd",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "params[a]",
+							"value": "60",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "params[b]",
+							"value": "120",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://rpc-test.dev:8080/?action=flattener",
+			"request": {
+				"url": {
+					"raw": "http://rpc-test.dev:8080/?action=flattener&params[object]={\"a\":60,\"b\":18,\"c\":{\"d\":30,\"e\":24}}",
+					"protocol": "http",
+					"host": [
+						"rpc-test",
+						"dev"
+					],
+					"port": "8080",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "flattener",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "params[object]",
+							"value": "{\"a\":60,\"b\":18,\"c\":{\"d\":30,\"e\":24}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
