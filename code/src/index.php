@@ -1,8 +1,8 @@
 <?php
 
+use PayBreak\Rpc\Request;
 use Pukkancs\Rpc\Lib\Collection;
 use Pukkancs\Rpc\Lib\Math;
-use PayBreak\Rpc\Request;
 
 include_once '../vendor/autoload.php';
 
@@ -48,7 +48,7 @@ class MyApi
 
     protected function flattener(array $params): array
     {
-        $subject = json_decode($params['object'],1);
+        $subject = json_decode($params['object'], 1);
 
         try {
             return (new Collection($subject))
@@ -59,7 +59,7 @@ class MyApi
         }
     }
 
-    protected function gcd(array $params) : array
+    protected function gcd(array $params): array
     {
         $array = [(int)$params['a'], (int)$params['b']];
 

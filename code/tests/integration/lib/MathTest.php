@@ -2,10 +2,10 @@
 
 namespace Pukkancs\Rpc\Test\Lib;
 
+use PHPUnit\Framework\TestCase;
 use Pukkancs\Rpc\Lib\{
     Collection, Math
 };
-use PHPUnit\Framework\TestCase;
 
 class MathTest extends TestCase
 {
@@ -72,7 +72,7 @@ class MathTest extends TestCase
     /** @expectedException \InvalidArgumentException */
     public function testGCDWithMultiDimensionalInput()
     {
-        $original = ['a' => 60, 'b' => 18, 'c' => [ 'd' => 30, 'e' => 24]];
+        $original = ['a' => 60, 'b' => 18, 'c' => ['d' => 30, 'e' => 24]];
 
         $subject = (new Collection($original));
 

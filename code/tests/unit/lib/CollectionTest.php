@@ -3,8 +3,8 @@
 
 namespace Pukkancs\Rpc\Test\Lib;
 
-use Pukkancs\Rpc\Lib\Collection;
 use PHPUnit\Framework\TestCase;
+use Pukkancs\Rpc\Lib\Collection;
 
 class CollectionTest extends TestCase
 {
@@ -71,7 +71,8 @@ class CollectionTest extends TestCase
             'f' => [
                 'e' =>
                     ['g' => 12, 'h' => 15],
-                'i' => 20],
+                'i' => 20
+            ],
             'j'
         ];
 
@@ -116,7 +117,8 @@ class CollectionTest extends TestCase
             'f' => [
                 'e' =>
                     ['g' => 12, 'h' => 15],
-                'i' => 20],
+                'i' => 20
+            ],
             'j'
         ];
 
@@ -169,7 +171,7 @@ class CollectionTest extends TestCase
     {
         $original = [
             'a' => new Collection([1]),
-            'b' => new Collection([1,5])
+            'b' => new Collection([1, 5])
         ];
 
         $expected = true;

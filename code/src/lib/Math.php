@@ -28,25 +28,6 @@ class Math
         return $this->calculateGreatestCommonDivider($subject);
     }
 
-    public function getAbsMin(CollectionInterface $subject, $excludeZeroItems = false): ?int
-    {
-        $absMin = null;
-
-        foreach ($subject->getValues() as $key => $item) {
-            if ($excludeZeroItems && $item === 0) {
-                continue;
-            }
-
-            if (!is_null($absMin) && abs($item) > $absMin) {
-                continue;
-            }
-
-            $absMin = abs($item);
-        }
-
-        return $absMin;
-    }
-
     public function containsZerosOnly(CollectionInterface $subject): bool
     {
         foreach ($subject->getValues() as $key => $item) {
@@ -84,6 +65,25 @@ class Math
         }
 
         return $gcd;
+    }
+
+    public function getAbsMin(CollectionInterface $subject, $excludeZeroItems = false): ?int
+    {
+        $absMin = null;
+
+        foreach ($subject->getValues() as $key => $item) {
+            if ($excludeZeroItems && $item === 0) {
+                continue;
+            }
+
+            if (!is_null($absMin) && abs($item) > $absMin) {
+                continue;
+            }
+
+            $absMin = abs($item);
+        }
+
+        return $absMin;
     }
 
 }
