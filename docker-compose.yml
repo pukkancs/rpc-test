@@ -8,6 +8,6 @@ nginx:
     links:
         - php
 php:
-    image: php:7.1-fpm
+    build: ./container/php
     volumes:
         - ./code:/code

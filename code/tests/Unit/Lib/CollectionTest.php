@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Pukkancs\Rpc\Test\Lib;
+namespace Pukkancs\Rpc\Test\Unit\Lib;
 
 use PHPUnit\Framework\TestCase;
 use Pukkancs\Rpc\Lib\Collection;
