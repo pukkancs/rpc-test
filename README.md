@@ -9,10 +9,9 @@
 
 - Run the following commands
 ```
-git clone https://github.com/pukkancs/rpc-test.git
-cd code
-composer install
-cd ..
+git clone https://github.com/pukkancs/rpc-test.git rpc-test
+cd rpc-test
+composer install -d code
 ```
 
 - Add to hosts file:
