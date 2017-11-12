@@ -4,9 +4,17 @@ namespace Pukkancs\Rpc\Lib;
 
 use InvalidArgumentException;
 
+/**
+ * Class Math
+ * @package Pukkancs\Rpc\Lib
+ */
 class Math
 {
 
+    /**
+     * @param CollectionInterface $subject
+     * @return int
+     */
     public function greatestCommonDivider(CollectionInterface $subject): int
     {
         if ($subject->isMultiDimensional()) {
@@ -28,6 +36,10 @@ class Math
         return $this->calculateGreatestCommonDivider($subject);
     }
 
+    /**
+     * @param CollectionInterface $subject
+     * @return bool
+     */
     public function containsZerosOnly(CollectionInterface $subject): bool
     {
         foreach ($subject->getValues() as $key => $item) {
@@ -39,6 +51,11 @@ class Math
         return true;
     }
 
+    /**
+     * @param CollectionInterface $subject
+     * @param bool $excludeZeroItems
+     * @return int|null
+     */
     public function getAbsMin(CollectionInterface $subject, $excludeZeroItems = false): ?int
     {
         $absMin = null;
@@ -62,6 +79,10 @@ class Math
         return $absMin;
     }
 
+    /**
+     * @param CollectionInterface $subject
+     * @return int
+     */
     private function calculateGreatestCommonDivider(CollectionInterface $subject): int
     {
         $gcd = 1;
