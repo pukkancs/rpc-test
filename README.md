@@ -2,7 +2,6 @@
 
 ## Requirements:
 - Docker
-- Composer
 
 ## Setup:
 
